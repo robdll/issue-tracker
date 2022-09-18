@@ -9,6 +9,7 @@ This project is created using [NextJs](https://nextjs.org/) and features:
 - [Prettier](https://prettier.io/)
 - [ESLint](https://eslint.org/)
 - [Jest](https://jestjs.io/)
+- [Cypress](https://www.cypress.io/)
 
 The project is hosted via [Vercel](https://vercel.com/) and can be found [Here](https://issue-tracker-ashen.vercel.app/)
 
@@ -35,4 +36,22 @@ The following endpoints are available:
 
 # Tests
 
+There are 2 types of tests:
+
+- Unit tests: implemented using [Jest](https://jestjs.io/)
+- e2e tests: implemented using [Cypress](https://www.cypress.io/)
+
+## Unit Tests
+
 To run tests open your terminal in the project root directory and run `yarn test`
+
+## e2e Tests
+
+You can run cypress test in 2 ways:
+
+1. Manual: `yarn e2e`
+2. Headless: `yarn e2e:headless`
+
+# License
+
+MIT
