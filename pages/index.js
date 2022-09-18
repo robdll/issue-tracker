@@ -6,6 +6,7 @@ import IssueModelTable from '@components/IssueModelTable'
 import {
   MAINPAGE_SEO_TITLE,
   MAINPAGE_SEO_DESCRIPTION,
+  FCC_LINK,
 } from '@constants/app.constants'
 
 export default function Home() {
@@ -16,28 +17,36 @@ export default function Home() {
         <Sidebar />
         <main className={styles.main}>
           <h1 className={styles.mainTitle}>Issue Tracker API</h1>
-
           <p className={styles.description}>
             This API was created as part of the{' '}
-            <Link
-              className={styles.link}
-              href="https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/issue-tracker"
-            >
+            <Link className={styles.link} href={FCC_LINK}>
               FreeCodeCamp Quality Assurance certification
             </Link>
             .
           </p>
-
           <h2 className={styles.title} id="#introduction">
             Introduction
           </h2>
-
           <p className={styles.description}>
-            This API allow you to <b>create</b>, <b>read</b>, <b>update</b> and{' '}
+            The API is a simple issue tracker. <br />
+            All requests needs to be directed to the Domain:
+          </p>
+          <code className={styles.code}>
+            https://issue-tracker-ashen.vercel.app/api/<b>{'<ENDPOINT>'}</b>
+          </code>
+          <p className={styles.description}>
+            Replace <b>{'<ENDPOINT>'}</b> with one of the available endpoints
+            which allow to <b>create</b>, <b>read</b>, <b>update</b> and{' '}
             <b>delete</b> issues. Issue model is explained below:
           </p>
-
           <IssueModelTable />
+
+          <p className={styles.description}>
+            Currently all the issue are linked to one of the 3 existing
+            projects: <b>development</b>, <b>test</b>, <b>production</b>. At
+            this time it is not possible to create a project nor to assign an
+            issue to a specific project.
+          </p>
         </main>
       </div>
     </>
