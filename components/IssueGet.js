@@ -16,11 +16,14 @@ export default function IssueGet() {
     open: true,
   })
 
-  let keysHtml = keys.map(([key, val]) => {
+  let keysHtml = keys.map(([k, val]) => {
     val = typeof val === 'string' ? `"${val}"` : val
     return (
       <>
-        <span className={routeStyles.marginLeft}>{`"${key}": ${val}`}</span>
+        <span
+          key={k}
+          className={routeStyles.marginLeft}
+        >{`"${k}": ${val}`}</span>
         <br />
       </>
     )
