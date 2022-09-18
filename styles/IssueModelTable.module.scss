@@ -1,0 +1,33 @@
+.table {
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.headerRow {
+  background-color: var(--color-gray);
+  padding: 0.5rem;
+
+  th {
+    padding: 0.3rem;
+    color: white;
+  }
+}
+
+.row {
+  td {
+    padding: 0.3rem;
+    color: var(--color-gray);
+    min-width: 10rem;
+  }
+  td:nth-of-type(2) {
+    font-style: italic;
+  }
+  .required {
+    color: coral;
+  }
+}
+
+.row:nth-of-type(odd) {
+  background-color: var(--color-mediumgray);
+}

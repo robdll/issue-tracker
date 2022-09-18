@@ -1,7 +1,8 @@
-import Image from 'next/image'
+import Link from 'next/link'
 import styles from '@styles/Home.module.scss'
 import Seo from '@components/Seo'
 import Sidebar from '@components/Sidebar'
+import IssueModelTable from '@components/IssueModelTable'
 import {
   MAINPAGE_SEO_TITLE,
   MAINPAGE_SEO_DESCRIPTION,
@@ -14,44 +15,29 @@ export default function Home() {
       <div className={styles.container}>
         <Sidebar />
         <main className={styles.main}>
-          <h1 className={styles.title}>
-            Welcome to <a href="https://nextjs.org">Next.js!</a>
-          </h1>
+          <h1 className={styles.mainTitle}>Issue Tracker API</h1>
 
           <p className={styles.description}>
-            Get started by editing{' '}
-            <code className={styles.code}>pages/index.js</code>
+            This API was created as part of the{' '}
+            <Link
+              className={styles.link}
+              href="https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/issue-tracker"
+            >
+              FreeCodeCamp Quality Assurance certification
+            </Link>
+            .
           </p>
 
-          <div className={styles.grid}>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
+          <h2 className={styles.title} id="#introduction">
+            Introduction
+          </h2>
 
-            <a href="https://nextjs.org/learn" className={styles.card}>
-              <h2>Learn &rarr;</h2>
-              <p>Learn about Next.js in an interactive course with quizzes!</p>
-            </a>
+          <p className={styles.description}>
+            This API allow you to <b>create</b>, <b>read</b>, <b>update</b> and{' '}
+            <b>delete</b> issues. Issue model is explained below:
+          </p>
 
-            <a
-              href="https://github.com/vercel/next.js/tree/canary/examples"
-              className={styles.card}
-            >
-              <h2>Examples &rarr;</h2>
-              <p>Discover and deploy boilerplate example Next.js projects.</p>
-            </a>
-
-            <a
-              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              className={styles.card}
-            >
-              <h2>Deploy &rarr;</h2>
-              <p>
-                Instantly deploy your Next.js site to a public URL with Vercel.
-              </p>
-            </a>
-          </div>
+          <IssueModelTable />
         </main>
       </div>
     </>
