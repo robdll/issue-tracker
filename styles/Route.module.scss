@@ -1,0 +1,54 @@
+.green {
+  color: green;
+}
+
+.label {
+  font-weight: 500;
+  line-height: 2;
+}
+
+.method {
+  font-size: 1.5rem;
+  margin: 1rem 0 0;
+}
+
+.endpoint {
+  font-size: 1.5rem;
+}
+
+.example {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 0 0;
+  font-size: 1.2rem;
+  letter-spacing: 0;
+}
+
+.noMT {
+  margin-top: 0;
+}
+
+.marginLeft {
+  margin-left: 1rem;
+}
+
+.form {
+  width: 100%;
+  max-width: 250px;
+}
+.form label {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.form select {
+  cursor: pointer;
+}
+
+.form select,
+.form input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.3rem;
+  margin: 0.5rem 0;
+  display: block;
+}

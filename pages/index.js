@@ -7,7 +7,9 @@ import {
   MAINPAGE_SEO_TITLE,
   MAINPAGE_SEO_DESCRIPTION,
   FCC_LINK,
+  API_DOMAIN,
 } from '@constants/app.constants'
+import IssueGet from '@components/IssueGet'
 
 export default function Home() {
   return (
@@ -30,10 +32,12 @@ export default function Home() {
           <p className={styles.description}>
             The API is a simple issue tracker. <br />
             All requests needs to be directed to the Domain:
+            <br />
+            <code className={styles.code}>
+              {API_DOMAIN}
+              <b>{'<ENDPOINT>'}</b>
+            </code>
           </p>
-          <code className={styles.code}>
-            https://issue-tracker-ashen.vercel.app/api/<b>{'<ENDPOINT>'}</b>
-          </code>
           <p className={styles.description}>
             Replace <b>{'<ENDPOINT>'}</b> with one of the available endpoints
             which allow to <b>create</b>, <b>read</b>, <b>update</b> and{' '}
@@ -47,6 +51,8 @@ export default function Home() {
             this time it is not possible to create a project nor to assign an
             issue to a specific project.
           </p>
+
+          <IssueGet />
         </main>
       </div>
     </>
