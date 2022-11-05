@@ -19,13 +19,12 @@ export default function IssueGet() {
   let keysHtml = keys.map(([k, val]) => {
     val = typeof val === 'string' ? `"${val}"` : val
     return (
-      <>
-        <span
-          key={k}
-          className={routeStyles.marginLeft}
-        >{`"${k}": ${val}`}</span>
-        <br />
-      </>
+      <span
+        key={k}
+        className={`${routeStyles.marginLeft} ${routeStyles.oneline}`}
+      >
+        {`"${k}": ${val}`}
+      </span>
     )
   })
   return (
@@ -68,18 +67,15 @@ export default function IssueGet() {
       </p>
       <p className={`${homeStyles.description} ${routeStyles.noMT}`}>
         Response:
-        <br />
-        {'['}
-        {'{'}
-        <br />
-        {keysHtml}
-        {'},'}
-        <br />
-        {'...'}
-        <br />
-        {']'}
       </p>
-
+      <div className={routeStyles.response}>
+        <span className={routeStyles.oneline}> {'['} </span>
+        <span className={`${routeStyles.marginLeft} ${routeStyles.oneline}`}> {'{'} </span>
+        {keysHtml}
+        <span className={`${routeStyles.marginLeft} ${routeStyles.oneline}`}> {'},'} </span>
+        <span className={`${routeStyles.marginLeft} ${routeStyles.oneline}`}> {'...'} </span>
+        <span className={routeStyles.oneline}> {']'} </span>
+      </div>
       <p className={`${homeStyles.description} ${routeStyles.noMT}`}>
         <b>Test Get Request:</b>
       </p>

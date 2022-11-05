@@ -23,12 +23,24 @@
   letter-spacing: 0;
 }
 
+.response {
+  background-color: var(--color-lightgray);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
 .noMT {
   margin-top: 0;
 }
 
 .marginLeft {
   margin-left: 1rem;
+}
+
+.oneline {
+  display: block;
 }
 
 .form {
