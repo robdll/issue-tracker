@@ -33,12 +33,6 @@ describe("Viewing a project's issue", () => {
   it('should not work with multiple filters', () => {})
 })
 
-describe("Viewing a project's issue", () => {
-  it('should work', () => {})
-  it('should work with one filter', () => {})
-  it('should not work with multiple filters', () => {})
-})
-
 describe('Updating an issue', () => {
   it('should work when updating a single field ', () => {})
   it('should work when updating multiple fields ', () => {})
