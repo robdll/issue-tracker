@@ -18,7 +18,7 @@ export default function Home() {
       <div className={styles.container}>
         <Sidebar />
         <main className={styles.main}>
-          <h1 className={styles.mainTitle}>Issue Tracker API</h1>
+          <h1 className={styles.mainTitle} id="tracker-api">Tracker API</h1>
           <p className={styles.description}>
             This API was created as part of the{' '}
             <Link className={styles.link} href={FCC_LINK}>
@@ -26,7 +26,7 @@ export default function Home() {
             </Link>
             .
           </p>
-          <h2 className={styles.title} id="#introduction">
+          <h2 className={styles.title} id="introduction">
             Introduction
           </h2>
           <p className={styles.description}>
@@ -41,10 +41,18 @@ export default function Home() {
           <p className={styles.description}>
             Replace <b>{'<ENDPOINT>'}</b> with one of the available endpoints
             which allow to <b>create</b>, <b>read</b>, <b>update</b> and{' '}
-            <b>delete</b> issues. Issue model is explained below:
+            <b>delete</b> 
+          </p>
+
+          <h2 className={styles.title} id="issue-model">
+            Issue Model
+          </h2>
+          <p className={styles.description}>
+            Issue model is described in the following table:
           </p>
           <IssueModelTable />
 
+          <h2 className={styles.mainTitle} id="endpoint">Endpoints</h2>
           <p className={styles.description}>
             Currently all the issue are linked to one of the 3 existing
             projects: <b>development</b>, <b>test</b>, <b>production</b>. At

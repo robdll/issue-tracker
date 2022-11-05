@@ -4,11 +4,19 @@ import Link from 'next/link'
 export default function Sidebar() {
   return (
     <aside className={styles.aside}>
-      <Link href="#introduction">
-        <div className={styles.section}>Introduction</div>
+      <Link href="#tracker-api">
+        <div className={styles.section}>Tracker API</div>
       </Link>
-      <Link href="#issues">
-        <div className={styles.section}>ISSUE ROUTES</div>
+      <ul>
+        <Link href="#introduction">
+          <li className={styles.route}>Introduction</li>
+        </Link>
+        <Link href="#issue-model">
+          <li className={styles.route}>Issues Model</li>
+        </Link>
+      </ul>
+      <Link href="#endpoint">
+        <div className={styles.section}>Endpoints</div>
       </Link>
       <ul>
         <Link href="#get">
